@@ -14,7 +14,7 @@ import javax.jms.*;
 public class AppProducer {
 
     // 61616端口是Activemq默认的端口
-    private static final String url = "tcp://192.168.0.107:61616";
+    private static final String url = "failover:(tcp://192.168.0.107:61617,tcp://192.168.0.107:61618)?randomize=true";
 
     private static final String queueName = "queue-demo";
 
